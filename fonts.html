@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So sánh font · Atlas Diễn ngôn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Be+Vietnam+Pro:wght@300;400;500;600&family=Chakra+Petch:wght@400;500;600&family=Handjet:wght,ELGR,ELSH@100..900,1..2,0..16&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Phudu:wght@300..900&family=Trirong:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  :root { --paper:#F3ECDF; --card:#FBF7EF; --ink:#1F1A15; --ink2:#4A4136; --muted:#857862; --line:#D5C7AC; --son:#A63A2B; --la:#4F6B34; --cham:#2E3F5C; --nghe:#D9A13A; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Be Vietnam Pro",sans-serif; }
+  header { max-width:1180px; margin:0 auto; padding:40px 16px 10px; }
+  h1 { font-family:Newsreader,serif; font-weight:300; font-size:44px; margin:0 0 8px; letter-spacing:-.02em; }
+  header p { font-family:Newsreader,serif; font-size:18px; color:var(--ink2); max-width:46em; margin:0; }
+  .grid { max-width:1180px; margin:0 auto; padding:24px 16px 60px; display:grid; grid-template-columns:repeat(auto-fill,minmax(520px,1fr)); gap:18px; }
+  .opt { background:var(--card); border:1px solid var(--line); padding:22px 26px 24px; position:relative; }
+  .opt.rec { border:2px solid var(--son); }
+  .tag { font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:flex; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:16px; }
+  .tag b { color:var(--son); font-weight:500; }
+  .eb { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--son); margin:0 0 4px; }
+  .nm { font-size:64px; line-height:1; margin:0 0 8px; color:var(--son); }
+  .list { font-size:22px; margin:0 0 12px; color:var(--cham); }
+  .body { font-size:17px; line-height:1.6; color:var(--ink2); margin:0 0 12px; }
+  .meta { font-size:12px; color:var(--muted); margin:0; line-height:1.5; }
+  .ctl { margin-top:12px; display:flex; gap:10px; align-items:center; font-size:12px; color:var(--muted); flex-wrap:wrap; }
+  .ctl input { width:180px; accent-color:var(--son); }
+  @media (max-width:600px){ .grid{grid-template-columns:1fr} .nm{font-size:48px} }
+
+  /* Phương án */
+  .a .eb{font-family:"IBM Plex Mono"} .a .nm{font-family:Newsreader;font-style:italic} .a .list{font-family:Newsreader} .a .body{font-family:Newsreader}
+  .b .eb,.b .nm,.b .list{font-family:Handjet; font-variation-settings:"ELSH" var(--sh,7),"ELGR" var(--gr,1)}
+  .b .eb{font-size:16px;letter-spacing:.12em} .b .nm{font-size:84px;font-weight:500} .b .list{font-size:28px} .b .body{font-family:Newsreader}
+  .c .eb{font-family:"Be Vietnam Pro";font-weight:500} .c .nm{font-family:Trirong;font-style:italic;font-weight:300} .c .list{font-family:Trirong} .c .body{font-family:Trirong;font-weight:300;font-size:17.5px}
+  .d .eb{font-family:"Chakra Petch";font-weight:600} .d .nm{font-family:"Chakra Petch";font-weight:600;text-transform:none} .d .list{font-family:"Chakra Petch"} .d .body{font-family:Alegreya;font-size:18px}
+  .e .eb{font-family:"Be Vietnam Pro";font-weight:600} .e .nm{font-family:Phudu;font-weight:700} .e .list{font-family:Phudu;font-weight:500} .e .body{font-family:"Be Vietnam Pro";font-size:15.5px}
+</style>
+</head>
+<body>
+<header>
+  <p class="eb" style="font-family:'IBM Plex Mono';color:var(--son)">Bảng thử chữ</p>
+  <h1>Font cho Atlas Diễn ngôn</h1>
+  <p>Tất cả font dưới đây đều có bộ ký tự tiếng Việt đầy đủ trên Google Fonts. Mẫu chữ cố ý dùng những tên dân tộc có dấu chồng khó (Ê Đê, Xơ Đăng, Giẻ Triêng, Ơ Đu) để kiểm tra độ rõ của dấu.</p>
+</header>
+<main class="grid">
+
+  <section class="opt a">
+    <div class="tag"><span>A · Đang dùng</span><span>Newsreader + Plex Mono</span></div>
+    <p class="eb">Dân tộc · Hồ sơ 01</p>
+    <p class="nm">Ê Đê</p>
+    <p class="list">Xơ Đăng · Giẻ Triêng · Ơ Đu · Bru – Vân Kiều</p>
+    <p class="body">Người đồng mình thô sơ da thịt, chẳng mấy ai nhỏ bé đâu con. Văn hóa không đứng yên trong bảo tàng — đó là cộng đồng đang sống, đang thay đổi.</p>
+    <p class="meta">Học thuật, rất dễ đọc, nhưng trung tính — chưa gợi bản sắc.</p>
+  </section>
+
+  <section class="opt b rec" id="optb">
+    <div class="tag"><span>B · “Mũi thêu” — <b>đề xuất</b></span><span>Handjet + Newsreader</span></div>
+    <p class="eb">Dân tộc · Hồ sơ 01</p>
+    <p class="nm">Ê Đê</p>
+    <p class="list">Xơ Đăng · Giẻ Triêng · Ơ Đu · Bru – Vân Kiều</p>
+    <p class="body">Người đồng mình thô sơ da thịt, chẳng mấy ai nhỏ bé đâu con. Văn hóa không đứng yên trong bảo tàng — đó là cộng đồng đang sống, đang thay đổi.</p>
+    <p class="meta">Handjet dựng chữ từ các “mũi” hình học trên lưới — gợi đúng kỹ thuật thêu chữ thập, dệt hoa văn hình thoi. Chỉ dùng cho tên dân tộc, nhãn nhỏ; thân bài giữ Newsreader để dễ đọc.</p>
+    <div class="ctl"><label>Hình mũi thêu <input type="range" min="0" max="16" step="1" value="7" id="sh"></label><span id="shv">7</span>
+      <label>Lưới <input type="range" min="1" max="2" step=".1" value="1" id="gr" style="width:90px"></label></div>
+  </section>
+
+  <section class="opt c">
+    <div class="tag"><span>C · Thư pháp Đông Nam Á</span><span>Trirong</span></div>
+    <p class="eb">Dân tộc · Hồ sơ 01</p>
+    <p class="nm">Ê Đê</p>
+    <p class="list">Xơ Đăng · Giẻ Triêng · Ơ Đu · Bru – Vân Kiều</p>
+    <p class="body">Người đồng mình thô sơ da thịt, chẳng mấy ai nhỏ bé đâu con. Văn hóa không đứng yên trong bảo tàng — đó là cộng đồng đang sống, đang thay đổi.</p>
+    <p class="meta">Của xưởng Cadson Demak (Thái Lan), có chất thư pháp vùng Đông Nam Á lục địa. Mềm, trang nhã, hợp không khí văn chương.</p>
+  </section>
+
+  <section class="opt d">
+    <div class="tag"><span>D · Hoa văn góc cạnh</span><span>Chakra Petch + Alegreya</span></div>
+    <p class="eb">Dân tộc · Hồ sơ 01</p>
+    <p class="nm">Ê Đê</p>
+    <p class="list">Xơ Đăng · Giẻ Triêng · Ơ Đu · Bru – Vân Kiều</p>
+    <p class="body">Người đồng mình thô sơ da thịt, chẳng mấy ai nhỏ bé đâu con. Văn hóa không đứng yên trong bảo tàng — đó là cộng đồng đang sống, đang thay đổi.</p>
+    <p class="meta">Các góc vát của Chakra Petch gợi hoa văn hình học trên thổ cẩm; Alegreya cho thân bài có nhịp viết tay, ấm và dễ đọc.</p>
+  </section>
+
+  <section class="opt e">
+    <div class="tag"><span>E · Thiết kế bởi người Việt</span><span>Phudu + Be Vietnam Pro</span></div>
+    <p class="eb">Dân tộc · Hồ sơ 01</p>
+    <p class="nm">Ê Đê</p>
+    <p class="list">Xơ Đăng · Giẻ Triêng · Ơ Đu · Bru – Vân Kiều</p>
+    <p class="body">Người đồng mình thô sơ da thịt, chẳng mấy ai nhỏ bé đâu con. Văn hóa không đứng yên trong bảo tàng — đó là cộng đồng đang sống, đang thay đổi.</p>
+    <p class="meta">Phudu do nhà thiết kế Dương Trần vẽ, dấu tiếng Việt được xử lý rất kỹ. Mạnh, hiện đại — hợp tiêu đề lớn hơn là không khí học thuật.</p>
+  </section>
+
+</main>
+<script>
+  var b = document.getElementById("optb");
+  ["sh", "gr"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", function (ev) {
+      b.style.setProperty("--" + id, ev.target.value);
+      if (id === "sh") document.getElementById("shv").textContent = ev.target.value;
+    });
+  });
+</script>
+</body>
+</html>

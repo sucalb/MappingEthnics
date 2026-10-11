@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas Diễn ngôn · Dân tộc thiểu số Việt Nam</title>
+<meta name="description" content="Bản đồ số tìm hiểu diễn ngôn kiến tạo và diễn ngôn định kiến về 53 dân tộc thiểu số ở Việt Nam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Be+Vietnam+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Handjet:wght,ELGR,ELSH@100..900,1..2,0..16&display=swap&subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ MÀN MỞ ĐẦU ============ -->
+<div id="intro" class="intro" aria-modal="true" role="dialog" aria-labelledby="intro-title">
+  <div class="intro-band" aria-hidden="true"></div>
+  <div class="intro-inner">
+    <div class="intro-left">
+      <p class="eyebrow">Dự án học tập · Bản đồ số</p>
+      <h1 id="intro-title" class="intro-title">Atlas <em>Diễn ngôn</em><br>Dân tộc thiểu số<br>Việt Nam</h1>
+      <p class="intro-lede">Diễn ngôn là cách chúng ta <em>nói</em>, <em>viết</em> và <em>nghĩ</em> về một cộng đồng. Những câu nói tưởng chừng vô hại — “lạc hậu”, “hoang sơ”, “cần giúp đỡ” — có thể định hình cả cách một xã hội đối xử với 14 triệu người.</p>
+      <p class="intro-lede">Atlas này mời bạn đi qua 34 tỉnh thành và 53 dân tộc thiểu số để nhận ra hai kiểu diễn ngôn: <b class="k">kiến tạo</b> và <b class="d">định kiến</b>.</p>
+      <dl class="intro-stats">
+        <div><dt>53</dt><dd>dân tộc thiểu số</dd></div>
+        <div><dt>8</dt><dd>nhóm ngôn ngữ</dd></div>
+        <div><dt>34</dt><dd>tỉnh, thành phố</dd></div>
+      </dl>
+    </div>
+    <div class="intro-right">
+      <p class="eyebrow">Chọn người đồng hành</p>
+      <p class="intro-note">Người đồng hành sẽ đi cùng bạn, chia sẻ suy nghĩ và trả lời câu hỏi. Hai bạn có vai trò như nhau — bạn chọn ai cũng được, và có thể đổi bất cứ lúc nào.</p>
+      <div class="pick" id="pick"></div>
+      <button class="btn btn-primary btn-lg" id="intro-go" disabled>Bắt đầu khám phá <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ THANH ĐẦU TRANG ============ -->
+<header class="topbar">
+  <a class="brand" href="#/" aria-label="Về bản đồ">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text"><b>Atlas Diễn ngôn</b><span>Dân tộc thiểu số Việt Nam</span></span>
+  </a>
+  <nav class="nav" aria-label="Điều hướng chính">
+    <a href="#/" data-nav="map">Bản đồ</a>
+    <a href="#/khung" data-nav="lens">Khung diễn ngôn</a>
+    <a href="#/tro-choi" data-nav="game">Khung cửi</a>
+    <a href="#/du-an" data-nav="about">Về dự án</a>
+  </nav>
+  <button class="who" id="who" title="Đổi người đồng hành"><span class="who-av" id="who-av"></span><span class="who-t"><small>Đồng hành</small><b id="who-name">—</b></span></button>
+</header>
+
+<!-- ============ BẢN ĐỒ ============ -->
+<main id="view-map" class="view view-map">
+  <div class="map-wrap" id="map-wrap">
+    <svg id="map" role="img" aria-label="Bản đồ 34 tỉnh, thành phố Việt Nam"></svg>
+
+    <section class="atlas-card" aria-label="Tổng quan">
+      <p class="eyebrow">Atlas</p>
+      <h2>53 dân tộc thiểu số</h2>
+      <dl class="mini-stats">
+        <div><dt id="st-pop">14,1 tr</dt><dd>dân số 2019</dd></div>
+        <div><dt>34</dt><dd>tỉnh/thành</dd></div>
+        <div><dt>8</dt><dd>nhóm ngôn ngữ</dd></div>
+      </dl>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <div class="map-tools" role="group" aria-label="Điều khiển bản đồ">
+      <button id="zin" aria-label="Phóng to">+</button>
+      <button id="zout" aria-label="Thu nhỏ">−</button>
+      <button id="zreset" aria-label="Về toàn cảnh" title="Toàn cảnh">⤢</button>
+    </div>
+
+    <div class="dock" id="dock">
+      <div class="bubble" id="bubble" role="status" aria-live="polite">
+        <p class="bubble-tag"><span class="dot"></span><b id="bubble-name">Mây</b> · đồng hành</p>
+        <p class="bubble-text" id="bubble-text"></p>
+        <button class="btn btn-small" id="bubble-ask">Hỏi mình nhé →</button>
+      </div>
+      <button class="dock-fig" id="dock-fig" aria-label="Mở hộp trò chuyện"></button>
+    </div>
+
+    <a class="game-fab" href="#/tro-choi">
+      <span class="game-fab-pattern" aria-hidden="true"></span>
+      <span><small>Khám phá xong?</small><b>Dệt tấm vải tri thức</b></span>
+    </a>
+
+    <div class="tip" id="tip" role="tooltip"></div>
+  </div>
+
+  <aside class="panel" id="panel" aria-label="Danh sách dân tộc">
+    <div class="panel-head">
+      <h2 class="panel-title">Năm mươi ba dân tộc thiểu số</h2>
+      <p class="panel-sub">Rê chuột để thấy địa bàn trên bản đồ · chọn để mở hồ sơ</p>
+      <div class="search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Tìm trong 53 cộng đồng…" autocomplete="off" aria-label="Tìm dân tộc">
+        <div class="seg" role="tablist" aria-label="Sắp xếp">
+          <button data-sort="pop" class="on" role="tab">D.số</button>
+          <button data-sort="region" role="tab">Vùng</button>
+          <button data-sort="az" role="tab">A–Z</button>
+        </div>
+      </div>
+      <div class="fam-filter" id="fam-filter" aria-label="Lọc theo nhóm ngôn ngữ"></div>
+      <a class="lens-banner" href="#/khung"><i>Đọc trước: khung nhận diện diễn ngôn</i><span>Mở →</span></a>
+      <div class="prov-chip" id="prov-chip" hidden></div>
+    </div>
+    <ol class="list" id="list"></ol>
+    <p class="panel-foot">Số liệu: Tổng điều tra dân số 2019. Địa bàn theo 34 đơn vị hành chính từ 01/7/2025.</p>
+  </aside>
+</main>
+
+<!-- ============ HỒ SƠ DÂN TỘC ============ -->
+<section id="view-detail" class="view view-page" hidden></section>
+
+<!-- ============ KHUNG DIỄN NGÔN ============ -->
+<section id="view-lens" class="view view-page" hidden></section>
+
+<!-- ============ VỀ DỰ ÁN ============ -->
+<section id="view-about" class="view view-page" hidden></section>
+
+<!-- ============ TRÒ CHƠI ============ -->
+<section id="view-game" class="view view-page view-game" hidden></section>
+
+<!-- ============ HỘP TRÒ CHUYỆN ============ -->
+<div class="chat" id="chat" hidden role="dialog" aria-label="Trò chuyện với người đồng hành">
+  <header class="chat-head">
+    <span class="chat-av" id="chat-av"></span>
+    <div><b id="chat-name">Mây</b><small>Người đồng hành · trả lời từ dữ liệu của Atlas</small></div>
+    <button class="chat-x" id="chat-x" aria-label="Đóng">×</button>
+  </header>
+  <div class="chat-log" id="chat-log" aria-live="polite"></div>
+  <div class="chat-sugg" id="chat-sugg"></div>
+  <form class="chat-form" id="chat-form">
+    <input id="chat-in" autocomplete="off" placeholder="Hỏi về một dân tộc, một tỉnh, một định kiến…" aria-label="Câu hỏi">
+    <button class="btn btn-primary" type="submit">Gửi</button>
+  </form>
+</div>
+
+<script src="assets/vendor/d3.min.js"></script>
+<script src="assets/vendor/topojson-client.min.js"></script>
+<script src="assets/js/data-geo.js"></script>
+<script src="assets/js/data-ethnic.js"></script>
+<script src="assets/js/data-profiles.js"></script>
+<script src="assets/js/companion.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

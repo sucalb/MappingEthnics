@@ -1,5 +1,5 @@
 /* =====================================================================
-   HỒ SƠ DIỄN NGÔN — 44 dân tộc còn lại
+   HỒ SƠ NGÔN NGỮ — 44 dân tộc còn lại
    Nguyên tắc biên soạn:
    - Chỉ nêu chi tiết có trong các tài liệu dân tộc học phổ biến; khi chưa
      chắc chắn, dùng cách diễn đạt khái quát thay vì bịa chi tiết.
@@ -231,7 +231,7 @@
     near: "La Hủ, Phù Lá, Lô Lô, Si La, Cống",
     today: "Bản Hà Nhì ở Y Tý (Bát Xát) trở thành điểm đến nổi tiếng. Cộng đồng đang đứng trước câu hỏi giữ nhà trình tường khi vật liệu mới và nhu cầu du lịch thay đổi.",
     musing: "Trên mạng gọi Y Tý là “thiên đường săn mây”. Nhưng mây ở đó cũng là mây trên mái nhà của ai đó.",
-    myths: [["Bản Hà Nhì là “thiên đường săn mây” hoang sơ.", "Diễn ngôn du lịch biến quê hương của một cộng đồng thành phông nền cho ảnh của khách.", "Đó là nơi người Hà Nhì sống, làm ruộng, đi học, có những lo toan thường ngày.", "Giới thiệu cảnh quan cùng con người và câu chuyện của họ."]]
+    myths: [["Bản Hà Nhì là “thiên đường săn mây” hoang sơ.", "Ngôn ngữ du lịch biến quê hương của một cộng đồng thành phông nền cho ảnh của khách.", "Đó là nơi người Hà Nhì sống, làm ruộng, đi học, có những lo toan thường ngày.", "Giới thiệu cảnh quan cùng con người và câu chuyện của họ."]]
   });
 
   P("lao", {
@@ -402,7 +402,7 @@
     script: "chữ Xtiêng hệ Latin", near: "Mạ, Mnông, Chơ Ro, Cơ Ho",
     today: "Đông Nam Bộ đô thị hóa và công nghiệp hóa rất nhanh. Người Xtiêng đang chuyển đổi sinh kế sang trồng cây công nghiệp và làm công nhân, đồng thời tìm cách giữ cồng chiêng, thổ cẩm.",
     musing: "Mình sống ở thành phố gần đó bao năm mà không biết người bản địa của vùng là ai.",
-    myths: [["Đông Nam Bộ là vùng đất của người Kinh và người Hoa.", "Diễn ngôn “khai hoang” khiến cư dân bản địa trở nên vô hình trong lịch sử vùng đất.", "Người Xtiêng, Mạ, Chơ Ro, Mnông… là những cư dân lâu đời của Đông Nam Bộ.", "Nhắc đến cư dân bản địa khi kể về lịch sử vùng đất."]]
+    myths: [["Đông Nam Bộ là vùng đất của người Kinh và người Hoa.", "Ngôn ngữ “khai hoang” khiến cư dân bản địa trở nên vô hình trong lịch sử vùng đất.", "Người Xtiêng, Mạ, Chơ Ro, Mnông… là những cư dân lâu đời của Đông Nam Bộ.", "Nhắc đến cư dân bản địa khi kể về lịch sử vùng đất."]]
   });
 
   P("choro", {
@@ -478,7 +478,7 @@
     works: [["Truyền thuyết K’Lang – H’Biang", "Truyền thuyết", "Câu chuyện tình gắn với núi Lang Biang. Khi kể lại cho du khách, câu chuyện thường bị lãng mạn hóa, ít nhắc đến luật tục và xung đột cộng đồng trong nguyên bản."], ["Tơlơi pơdao (hát kể)", "Dân ca", "Các lối hát kể, hát đối của người Cơ Ho trong sinh hoạt và lễ hội."]],
     today: "Đà Lạt là thành phố du lịch lớn, nhưng người Cơ Ho thường chỉ xuất hiện trong các chương trình “giao lưu cồng chiêng”. Nhiều người trẻ Cơ Ho đang tự kể câu chuyện của mình qua nghệ thuật, nhiếp ảnh, mạng xã hội.",
     musing: "Đi Đà Lạt bao lần mà mình chưa từng biết Lang Biang là tên của hai người Cơ Ho.",
-    myths: [["Đà Lạt là “thành phố do người Pháp xây dựng”.", "Diễn ngôn thuộc địa xóa đi sự hiện diện của cư dân bản địa trên vùng đất.", "Cao nguyên Lâm Viên là quê hương của người Lạch (Cơ Ho) từ trước khi có thành phố.", "Nhắc đến người Cơ Ho khi kể lịch sử Đà Lạt."], THUONG]
+    myths: [["Đà Lạt là “thành phố do người Pháp xây dựng”.", "Ngôn ngữ thuộc địa xóa đi sự hiện diện của cư dân bản địa trên vùng đất.", "Cao nguyên Lâm Viên là quê hương của người Lạch (Cơ Ho) từ trước khi có thành phố.", "Nhắc đến người Cơ Ho khi kể lịch sử Đà Lạt."], THUONG]
   });
 
   P("mnong", {
@@ -669,7 +669,7 @@
     near: "Việt, Mường, Thổ",
     today: "Người Chứt đã định cư ổn định, trẻ em được đến trường. Các nhà nghiên cứu và cộng đồng đang ghi chép ngôn ngữ, tri thức bản địa.",
     musing: "Có bài báo gọi người Rục là “người tiền sử cuối cùng”. Mình thấy câu đó làm mình không thoải mái.",
-    myths: [["Người Rục là “người tiền sử”, “người hang động”.", "Đặt một cộng đồng đương đại vào “quá khứ” của nhân loại — một kiểu diễn ngôn tiến hóa luận đã bị phê phán từ lâu.", "Người Rục từng sống trong hang đá do hoàn cảnh lịch sử, chiến tranh; họ là những người đương đại với tri thức sinh tồn phức tạp.", "“Người Rục, một nhóm của dân tộc Chứt”."], TINY]
+    myths: [["Người Rục là “người tiền sử”, “người hang động”.", "Đặt một cộng đồng đương đại vào “quá khứ” của nhân loại — một kiểu ngôn ngữ tiến hóa luận đã bị phê phán từ lâu.", "Người Rục từng sống trong hang đá do hoàn cảnh lịch sử, chiến tranh; họ là những người đương đại với tri thức sinh tồn phức tạp.", "“Người Rục, một nhóm của dân tộc Chứt”."], TINY]
   });
 
   P("odu", {

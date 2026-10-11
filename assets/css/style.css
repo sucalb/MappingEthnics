@@ -1,5 +1,5 @@
 /* =====================================================================
-   ATLAS DIỄN NGÔN — hệ màu lấy từ thuốc nhuộm tự nhiên
+   ATLAS NGÔN NGỮ — hệ màu lấy từ thuốc nhuộm tự nhiên
    chàm (indigo) · son/củ nâu (đỏ) · nghệ (vàng) · lá (xanh) · giấy dó
    ===================================================================== */
 :root {
@@ -465,7 +465,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .progress .bar i { display: block; height: 100%; background: var(--son); transition: width .4s; }
 .progress small { font-family: var(--mono); font-size: 9.5px; color: var(--muted); letter-spacing: .08em; }
 
-/* ============ KHUNG DIỄN NGÔN / DỰ ÁN ============ */
+/* ============ KHUNG NGÔN NGỮ / DỰ ÁN ============ */
 .article { max-width: 920px; margin: 0 auto; padding: 50px 40px 90px; }
 .article h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1; margin: 0 0 18px; letter-spacing: -.02em; }
 .article h1 em { color: var(--son); font-weight: 400; }

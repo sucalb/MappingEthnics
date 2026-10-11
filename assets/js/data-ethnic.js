@@ -98,7 +98,7 @@ window.ETHNIC = [
 window.KINH_POP_2019 = 82085826;
 
 /* =====================================================================
-   HỒ SƠ DIỄN NGÔN – các dân tộc đã được biên soạn đầy đủ
+   HỒ SƠ NGÔN NGỮ – các dân tộc đã được biên soạn đầy đủ
    ===================================================================== */
 window.PROFILES = {
 
@@ -364,14 +364,14 @@ window.COMMON_MYTHS = [
   { s: "Người Kinh là “người Việt Nam”, còn lại là “người dân tộc”.", why: "Cách nói khiến người Kinh trở thành chuẩn mực trung tính, còn các dân tộc khác là “phần còn lại”. Người Kinh cũng là một dân tộc.", alt: "Việt Nam có 54 dân tộc; người Kinh là dân tộc đa số. Mọi công dân, thuộc dân tộc nào, đều là người Việt Nam.", say: "“Người dân tộc Tày”, “người Kinh”, “các dân tộc thiểu số”." },
   { s: "Dân tộc thiểu số là lạc hậu, chậm phát triển.", why: "Đánh đồng “khác” với “kém”. Thước đo “phát triển” ở đây thường chỉ là lối sống đô thị của nhóm đa số.", alt: "Mỗi cộng đồng có hệ tri thức riêng về sinh thái, y học, kiến trúc, luật tục. Khoảng cách kinh tế phản ánh điều kiện địa lý, hạ tầng, chính sách — không phản ánh năng lực của một dân tộc.", say: "“Vùng có điều kiện kinh tế – xã hội đặc biệt khó khăn”." },
   { s: "Họ nghèo vì lười, quen trông chờ ỷ lại.", why: "Đẩy trách nhiệm của các vấn đề cấu trúc lên tính cách cá nhân hoặc tính cách dân tộc.", alt: "Nghèo đa chiều liên quan đến đất đai, khoảng cách tới thị trường, rào cản ngôn ngữ trong giáo dục và dịch vụ công.", say: "Nói về điều kiện, cơ hội và chính sách." },
-  { s: "Cần “giúp đỡ”, “khai hóa”, “nâng cao dân trí” cho đồng bào.", why: "Diễn ngôn ban ơn đặt người thiểu số vào vị trí bị động, người nhận; người đa số là người cho, người dạy.", alt: "Cộng đồng là chủ thể của sự phát triển của chính mình. Hợp tác, lắng nghe và tôn trọng tri thức bản địa hiệu quả hơn “ban phát”.", say: "“Đồng hành”, “hợp tác”, “cùng cộng đồng”." },
+  { s: "Cần “giúp đỡ”, “khai hóa”, “nâng cao dân trí” cho đồng bào.", why: "Ngôn ngữ ban ơn đặt người thiểu số vào vị trí bị động, người nhận; người đa số là người cho, người dạy.", alt: "Cộng đồng là chủ thể của sự phát triển của chính mình. Hợp tác, lắng nghe và tôn trọng tri thức bản địa hiệu quả hơn “ban phát”.", say: "“Đồng hành”, “hợp tác”, “cùng cộng đồng”." },
   { s: "Vùng dân tộc thiểu số “hoang sơ, kỳ bí, đẹp như tranh”.", why: "Lăng kính du lịch biến con người thành phong cảnh, biến đời sống thành “điều lạ” để chiêm ngưỡng.", alt: "Đó là quê hương, nơi con người lao động, học tập, có những lo toan và khát vọng như ở bất cứ đâu.", say: "Kể về con người như những chủ thể, không như phông nền." },
   { s: "Phong tục của họ là mê tín dị đoan.", why: "Áp hệ giá trị của mình để phán xét tín ngưỡng của người khác.", alt: "Các nghi lễ là hệ thống biểu tượng có logic nội tại, gắn với sinh thái và đạo đức cộng đồng. Nhiều nghi lễ đã được UNESCO ghi danh.", say: "“Tín ngưỡng”, “nghi lễ”, “thực hành văn hóa”." },
   { s: "Người dân tộc nào cũng giống nhau: ở nhà sàn, mặc thổ cẩm, uống rượu cần.", why: "Đồng nhất hóa 53 cộng đồng với 8 nhóm ngôn ngữ khác nhau thành một hình ảnh “dân tộc” chung chung.", alt: "Người Khmer theo Phật giáo Nam tông ở đồng bằng; người Chăm có đền tháp và chữ viết cổ; người Hoa ở đô thị; người Mông ở vùng cao… Sự đa dạng ấy rất lớn.", say: "Gọi đúng tên từng dân tộc." },
   { s: "Người dân tộc thiểu số lên thành phố là “mất gốc”.", why: "Mặc định bản sắc chỉ tồn tại ở một nơi chốn cố định và một lối sống cố định.", alt: "Bản sắc vận động cùng con người. Nhiều người trẻ ở thành phố lại chính là những người tích cực học tiếng mẹ đẻ và sáng tạo văn hóa của mình.", say: "“Người Tày ở Hà Nội”, “cộng đồng Khmer ở TP. Hồ Chí Minh”." }
 ];
 
-/* Bảng chuyển đổi ngôn từ — dùng ở trang Khung diễn ngôn & chatbot */
+/* Bảng chuyển đổi ngôn từ — dùng ở trang Khung ngôn ngữ & chatbot */
 window.LEXICON = [
   ["người dân tộc (để chỉ người thiểu số)", "người dân tộc + tên dân tộc (người Tày, người Ê Đê) / người dân tộc thiểu số"],
   ["mọi, man, Mán, Mèo, Thổ, Miên… (tên gọi cũ, miệt thị)", "tên gọi chính thức: Ba Na, Dao, Mông, Tày, Khmer…"],

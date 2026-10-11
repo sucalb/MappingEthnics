@@ -1,5 +1,5 @@
 /* =====================================================================
-   ATLAS DIỄN NGÔN — ứng dụng chính
+   ATLAS NGÔN NGỮ — ứng dụng chính
    ===================================================================== */
 (function () {
   "use strict";
@@ -309,7 +309,7 @@
       if (S.sort === "region" && e.region !== lastReg) { html += '<li class="grp">' + REG[e.region].name + '</li>'; lastReg = e.region; }
       html += '<li class="item' + (S.sel === e.id ? " on" : "") + '" data-id="' + e.id + '">' +
         '<button type="button" aria-expanded="' + (S.sel === e.id) + '"><span class="no">' + pad(e.rank) + '</span>' +
-        '<span><span class="nm">' + e.name + (PRO[e.id] ? ' <i class="star" title="Hồ sơ diễn ngôn đầy đủ"></i>' : '') + '</span>' +
+        '<span><span class="nm">' + e.name + (PRO[e.id] ? ' <i class="star" title="Hồ sơ ngôn ngữ đầy đủ"></i>' : '') + '</span>' +
         '<span class="meta">' + fmt(e.pop) + ' người · ' + REG[e.region].name + '</span></span>' + famBadge(e) + '</button>' +
         '<div class="more"><p>' + esc(leadOf(e)) + '</p><div class="prv">Địa bàn tập trung: ' + e.provinces.join(", ") + '</div>' +
         '<a class="btn btn-primary btn-small" href="#/dan-toc/' + e.id + '">Khám phá hồ sơ →</a></div></li>';
@@ -393,7 +393,7 @@
 
     h += '<div class="detail"><div class="d-main">';
     h += '<div class="hero"><div>' +
-      '<div class="idx"><span>Hồ sơ ' + pad(e.rank) + ' / 53</span><span>' + (pr ? "Hồ sơ diễn ngôn đầy đủ" : "Hồ sơ đang biên soạn") + '</span></div>' +
+      '<div class="idx"><span>Hồ sơ ' + pad(e.rank) + ' / 53</span><span>' + (pr ? "Hồ sơ ngôn ngữ đầy đủ" : "Hồ sơ đang biên soạn") + '</span></div>' +
       '<p class="kicker">Dân tộc</p><h1>' + e.name + '</h1>' +
       (e.alt ? '<p class="alt"><i>Tên gọi khác, nhóm địa phương:</i> ' + esc(e.alt) + '</p>' : '') +
       '<div class="chips"><span class="chip k">' + REG[e.region].name + '</span>' + e.provinces.map(function (p) { return '<span class="chip">' + p + '</span>'; }).join("") + '</div>' +
@@ -413,7 +413,7 @@
     }
 
     h += '<div class="parts" id="parts"><div class="parts-row">' +
-      '<div><div class="parts-lbl k">Phần I · Diễn ngôn kiến tạo</div><div class="tabs k">' +
+      '<div><div class="parts-lbl k">Phần I · Ngôn ngữ kiến tạo</div><div class="tabs k">' +
       TABS.map(function (t) { return '<button data-tab="' + t[0] + '"><small>' + t[1] + '</small><b>' + t[2] + '</b></button>'; }).join("") + '</div></div>' +
       '<div><div class="parts-lbl d">Phần II</div><div class="tabs d"><button data-tab="myths"><small>06</small><b>Định kiến</b></button></div></div>' +
       '</div></div><div id="tab-body"></div>';
@@ -491,7 +491,7 @@
       else h += pending("Phần đời sống đương đại của người " + e.name + " đang được biên soạn.");
     }
     if (tab === "myths") {
-      h += '<h3 class="sec-h" style="color:var(--son)">Diễn ngôn định kiến</h3><p class="sec-sub">Mỗi thẻ là một câu nói có thật trong đời sống, truyền thông, sách vở. Bấm “Đọc ngược” để thấy cơ chế định kiến và một cách nói khác.</p>';
+      h += '<h3 class="sec-h" style="color:var(--son)">Ngôn ngữ định kiến</h3><p class="sec-sub">Mỗi thẻ là một câu nói có thật trong đời sống, truyền thông, sách vở. Bấm “Đọc ngược” để thấy cơ chế định kiến và một cách nói khác.</p>';
       var own = pr && pr.myths ? pr.myths : [];
       if (own.length) h += '<div class="sub-h">Về người ' + e.name + '</div>' + own.map(mythCard).join("");
       h += '<div class="sub-h">Khuôn mẫu chung “người Kinh – người thiểu số”</div>' + window.COMMON_MYTHS.map(function (m, i) { return mythCard(m, 100 + i); }).join("");
@@ -515,15 +515,15 @@
   }
 
   /* =====================================================================
-     KHUNG DIỄN NGÔN
+     KHUNG NGÔN NGỮ
      ===================================================================== */
   function renderLens() {
-    var h = '<div class="page-bar"><a class="back" href="#/">← Bản đồ</a><span class="crumb">Atlas / <b>Khung diễn ngôn</b></span></div><article class="article">' +
-      '<p class="eyebrow">Khung lý thuyết · đọc trước khi khám phá</p><h1>Nhận diện <em>diễn ngôn</em></h1>' +
-      '<p class="lede">Diễn ngôn dân tộc thiểu số là tập hợp các cách nói, cách viết, quan điểm và hệ thống ý tưởng dùng để định hình, thảo luận hoặc phán xét về các cộng đồng dân tộc thiểu số trong xã hội. Diễn ngôn không chỉ phản ánh thực tế — nó tạo ra thực tế.</p>' +
-      '<h2><small>01</small>Hai kiểu diễn ngôn</h2>' +
-      '<div class="duo"><div><h3>Diễn ngôn kiến tạo</h3><ul><li>Gọi đúng tên dân tộc, đúng tên thực hành văn hóa</li><li>Đặt hiện tượng trong bối cảnh lịch sử, sinh thái</li><li>Để cộng đồng tự kể về mình</li><li>Nhìn thấy sự đa dạng bên trong mỗi cộng đồng</li><li>Nhìn con người như chủ thể đang sống, đang thay đổi</li></ul></div>' +
-      '<div><h3>Diễn ngôn định kiến</h3><ul><li>Lấy một nhóm làm “chuẩn”, nhóm khác là “khác”</li><li>Quy vấn đề xã hội thành “bản chất” dân tộc</li><li>Kỳ lạ hóa, thần bí hóa, “du lịch hóa”</li><li>Ban ơn, coi cộng đồng là đối tượng thụ động</li><li>Đóng băng văn hóa trong quá khứ</li></ul></div></div>' +
+    var h = '<div class="page-bar"><a class="back" href="#/">← Bản đồ</a><span class="crumb">Atlas / <b>Khung ngôn ngữ</b></span></div><article class="article">' +
+      '<p class="eyebrow">Khung lý thuyết · đọc trước khi khám phá</p><h1>Nhận diện <em>ngôn ngữ</em></h1>' +
+      '<p class="lede">Ngôn ngữ dân tộc thiểu số là tập hợp các cách nói, cách viết, quan điểm và hệ thống ý tưởng dùng để định hình, thảo luận hoặc phán xét về các cộng đồng dân tộc thiểu số trong xã hội. Ngôn ngữ không chỉ phản ánh thực tế — nó tạo ra thực tế.</p>' +
+      '<h2><small>01</small>Hai kiểu ngôn ngữ</h2>' +
+      '<div class="duo"><div><h3>Ngôn ngữ kiến tạo</h3><ul><li>Gọi đúng tên dân tộc, đúng tên thực hành văn hóa</li><li>Đặt hiện tượng trong bối cảnh lịch sử, sinh thái</li><li>Để cộng đồng tự kể về mình</li><li>Nhìn thấy sự đa dạng bên trong mỗi cộng đồng</li><li>Nhìn con người như chủ thể đang sống, đang thay đổi</li></ul></div>' +
+      '<div><h3>Ngôn ngữ định kiến</h3><ul><li>Lấy một nhóm làm “chuẩn”, nhóm khác là “khác”</li><li>Quy vấn đề xã hội thành “bản chất” dân tộc</li><li>Kỳ lạ hóa, thần bí hóa, “du lịch hóa”</li><li>Ban ơn, coi cộng đồng là đối tượng thụ động</li><li>Đóng băng văn hóa trong quá khứ</li></ul></div></div>' +
       '<h2><small>02</small>Năm câu hỏi để đọc một văn bản</h2><p>Khi đọc một bài báo, một trang sách giáo khoa, một bài đăng du lịch hay một bộ phim về dân tộc thiểu số, hãy tự hỏi:</p>' +
       '<ol class="qs"><li>Ai đang nói? Người trong cộng đồng hay người ngoài?</li><li>Cộng đồng xuất hiện như chủ thể hành động hay như đối tượng được mô tả, được giúp đỡ?</li><li>Văn bản đang so sánh với ai, và ai được coi là “chuẩn”?</li><li>Điều gì được kể, và điều gì bị bỏ qua?</li><li>Nếu chính người được nói đến đọc văn bản này, họ sẽ cảm thấy thế nào?</li></ol>' +
       '<h2><small>03</small>Bảng chuyển đổi ngôn từ</h2><p>Ngôn từ không trung tính. Một vài thay đổi nhỏ có thể làm khác đi cả cách nhìn:</p>' +
@@ -546,11 +546,11 @@
   function renderAbout() {
     var h = '<div class="page-bar"><a class="back" href="#/">← Bản đồ</a><span class="crumb">Atlas / <b>Về dự án</b></span></div><article class="article">' +
       '<p class="eyebrow">Về dự án</p><h1>Bản đồ để <em>học cách nhìn</em></h1>' +
-      '<p class="lede">Atlas Diễn ngôn là một bản đồ số dùng cho học tập, hướng tới mục đích bình đẳng: giúp người học biết cách ứng xử, hiểu các nét đẹp văn hóa truyền thống của các dân tộc ít người để trân trọng, tránh cái nhìn phán xét.</p>' +
-      '<h2><small>01</small>Cách dùng</h2><ol class="qs"><li>Chọn một người đồng hành — Mây hoặc Núi.</li><li>Rê chuột trên bản đồ để xem mỗi tỉnh có bao nhiêu dân tộc thiểu số cư trú tập trung; bấm vào tỉnh để lọc danh sách.</li><li>Rê chuột trên danh sách để thấy địa bàn của từng dân tộc; chọn “Khám phá hồ sơ”.</li><li>Trong hồ sơ, đi qua Phần I (diễn ngôn kiến tạo) rồi Phần II (định kiến).</li><li>Khám phá xong, vào “Khung cửi” để dệt tấm vải tri thức của bạn.</li></ol>' +
-      '<h2><small>02</small>Về người đồng hành</h2><p>Hai nhân vật có cùng trang phục, cùng vai trò, cùng lời thoại; khác biệt duy nhất là kiểu tóc. Thứ tự hiển thị được xáo ngẫu nhiên mỗi lần chọn, để không nhân vật nào được mặc định là “mặc định”. Đây là một lựa chọn thiết kế có chủ đích nhằm tránh diễn ngôn về giới.</p>' +
+      '<p class="lede">Atlas Ngôn ngữ là một bản đồ số dùng cho học tập, hướng tới mục đích bình đẳng: giúp người học biết cách ứng xử, hiểu các nét đẹp văn hóa truyền thống của các dân tộc ít người để trân trọng, tránh cái nhìn phán xét.</p>' +
+      '<h2><small>01</small>Cách dùng</h2><ol class="qs"><li>Chọn một người đồng hành — Mây hoặc Núi.</li><li>Rê chuột trên bản đồ để xem mỗi tỉnh có bao nhiêu dân tộc thiểu số cư trú tập trung; bấm vào tỉnh để lọc danh sách.</li><li>Rê chuột trên danh sách để thấy địa bàn của từng dân tộc; chọn “Khám phá hồ sơ”.</li><li>Trong hồ sơ, đi qua Phần I (ngôn ngữ kiến tạo) rồi Phần II (định kiến).</li><li>Khám phá xong, vào “Khung cửi” để dệt tấm vải tri thức của bạn.</li></ol>' +
+      '<h2><small>02</small>Về người đồng hành</h2><p>Hai nhân vật có cùng trang phục, cùng vai trò, cùng lời thoại; khác biệt duy nhất là kiểu tóc. Thứ tự hiển thị được xáo ngẫu nhiên mỗi lần chọn, để không nhân vật nào được mặc định là “mặc định”. Đây là một lựa chọn thiết kế có chủ đích nhằm tránh ngôn ngữ về giới.</p>' +
       '<h2><small>03</small>Dữ liệu</h2><p>Dân số theo Tổng điều tra dân số và nhà ở 01/4/2019. Ranh giới hành chính theo 34 đơn vị cấp tỉnh từ 01/7/2025 (dữ liệu mở của cộng đồng GIS, đã giản lược). Bản đồ thể hiện đầy đủ quần đảo Hoàng Sa và quần đảo Trường Sa thuộc chủ quyền Việt Nam. “Địa bàn cư trú tập trung” là các tỉnh nơi cộng đồng sinh sống đông, không phải toàn bộ nơi có người của dân tộc đó.</p>' +
-      '<h2><small>04</small>Giới hạn &amp; đóng góp</h2><p>Hiện có ' + Object.keys(PRO).length + ' hồ sơ diễn ngôn đầy đủ; các hồ sơ còn lại đang được biên soạn. Nội dung cần được rà soát bởi chuyên gia và, quan trọng nhất, bởi chính người trong cộng đồng. Người đồng hành trả lời dựa trên dữ liệu trong Atlas, không phải một mô hình ngôn ngữ, nên sẽ không bịa đặt thông tin ngoài dữ liệu.</p>' +
+      '<h2><small>04</small>Giới hạn &amp; đóng góp</h2><p>Hiện có ' + Object.keys(PRO).length + ' hồ sơ ngôn ngữ đầy đủ; các hồ sơ còn lại đang được biên soạn. Nội dung cần được rà soát bởi chuyên gia và, quan trọng nhất, bởi chính người trong cộng đồng. Người đồng hành trả lời dựa trên dữ liệu trong Atlas, không phải một mô hình ngôn ngữ, nên sẽ không bịa đặt thông tin ngoài dữ liệu.</p>' +
       '<p>Mọi đóng góp tư liệu, ảnh có cấp phép, hoặc góp ý về cách diễn đạt xin gửi về nhóm thực hiện.</p></article>';
     $("#view-about").innerHTML = h;
   }
@@ -639,7 +639,7 @@
       "Tấm vải còn nhiều sợi mộc — không sao cả. Nhận ra mình từng nghĩ sai là bước đầu tiên để nhìn khác đi.";
     $("#g-main").innerHTML = '<div class="result"><p class="eyebrow">Tấm vải đã dệt xong</p><div class="big">' + G.score + ' / ' + total + '</div>' +
       '<p>' + msg + '</p><p style="font-size:15px">' + compName() + ': “Mình cũng từng sai ở vài câu. Điều mình học được là: trước khi nói về một cộng đồng, hãy hỏi xem chính họ nói gì về mình.”</p>' +
-      '<p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" id="g-again">Dệt lại tấm mới</button><a class="btn" href="#/khung">Đọc Khung diễn ngôn</a><a class="btn" href="#/">Về bản đồ</a></p></div>';
+      '<p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" id="g-again">Dệt lại tấm mới</button><a class="btn" href="#/khung">Đọc Khung ngôn ngữ</a><a class="btn" href="#/">Về bản đồ</a></p></div>';
     $("#g-again").onclick = renderGame;
     void tries;
   }
@@ -701,11 +701,11 @@
         return "Một định kiến hay gặp về người " + g.name + ": <i>“" + esc(m.s) + "”</i><br><br>" + esc(m.why) + "<br><br><b>Góc nhìn khác:</b> " + esc(m.alt) + "<br>Xem thêm ở tab " + link(g, "myths") + " → Định kiến.";
       }
       var c = window.COMMON_MYTHS[Math.floor(Math.random() * window.COMMON_MYTHS.length)];
-      return (g ? "Hồ sơ người " + g.name + " chưa có phần định kiến riêng, nhưng khuôn mẫu chung vẫn áp dụng. " : "") + "Ví dụ: <i>“" + esc(c.s) + "”</i> — " + esc(c.why) + "<br><br><b>Có thể nói:</b> " + esc(c.say) + "<br>Đọc thêm ở <a href=\"#/khung\">Khung diễn ngôn</a>.";
+      return (g ? "Hồ sơ người " + g.name + " chưa có phần định kiến riêng, nhưng khuôn mẫu chung vẫn áp dụng. " : "") + "Ví dụ: <i>“" + esc(c.s) + "”</i> — " + esc(c.why) + "<br><br><b>Có thể nói:</b> " + esc(c.say) + "<br>Đọc thêm ở <a href=\"#/khung\">Khung ngôn ngữ</a>.";
     }
     if (has("nen goi", "xung ho", "ung xu", "cach noi", "nen noi", "tu ngu", "goi the nao", "noi the nao", "lich su", "ton trong")) {
       return "Vài gợi ý nhỏ:<br>• " + window.LEXICON.slice(0, 4).map(function (r) { return "Thay “" + esc(r[0]) + "” → “" + esc(r[1]) + "”"; }).join("<br>• ") +
-        "<br><br>Và quan trọng nhất: hãy hỏi tên dân tộc của người đối diện thay vì đoán, xin phép trước khi chụp ảnh. Bảng đầy đủ ở <a href=\"#/khung\">Khung diễn ngôn</a>.";
+        "<br><br>Và quan trọng nhất: hãy hỏi tên dân tộc của người đối diện thay vì đoán, xin phép trước khi chụp ảnh. Bảng đầy đủ ở <a href=\"#/khung\">Khung ngôn ngữ</a>.";
     }
     if (prov && (!g || has("tinh", "co nhung", "nhung dan toc", "bao nhieu"))) {
       var p = provInfo[prov.name];
@@ -742,7 +742,7 @@
       return "Vùng <b>" + REG[rk].name + "</b> là nơi cư trú chính của " + list.length + " dân tộc thiểu số: " + list.map(function (e) { return link(e); }).join(", ") + ".";
     }
     if (has("tro choi", "choi", "quiz", "trac nghiem")) return "Khám phá xong rồi thì vào <a href=\"#/tro-choi\">Khung cửi tri thức</a> nhé — mỗi câu đúng sẽ dệt thêm một dải hoa văn.";
-    if (has("dien ngon")) return "Diễn ngôn là cách chúng ta nói, viết và nghĩ về một cộng đồng. <b>Diễn ngôn kiến tạo</b> gọi đúng tên, đặt trong bối cảnh, để cộng đồng tự kể; <b>diễn ngôn định kiến</b> quy chụp, kỳ lạ hóa, ban ơn. Xem <a href=\"#/khung\">Khung diễn ngôn</a>.";
+    if (has("dien ngon")) return "Ngôn ngữ là cách chúng ta nói, viết và nghĩ về một cộng đồng. <b>Ngôn ngữ kiến tạo</b> gọi đúng tên, đặt trong bối cảnh, để cộng đồng tự kể; <b>ngôn ngữ định kiến</b> quy chụp, kỳ lạ hóa, ban ơn. Xem <a href=\"#/khung\">Khung ngôn ngữ</a>.";
     if (has("cam on", "thank")) return "Không có gì! Cảm ơn bạn đã cùng mình học cách nhìn.";
     return "Câu này mình chưa trả lời được từ dữ liệu của Atlas — và mình không muốn đoán bừa về một cộng đồng. Bạn thử hỏi theo tên một dân tộc, một tỉnh, hoặc về “định kiến”, “cách nói” nhé.";
   }

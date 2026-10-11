@@ -1,6 +1,6 @@
-# Atlas Diễn ngôn · Dân tộc thiểu số Việt Nam
+# Atlas Ngôn ngữ · Dân tộc thiểu số Việt Nam
 
-Bản đồ số tìm hiểu **diễn ngôn kiến tạo** và **diễn ngôn định kiến** về 53 dân tộc thiểu số.
+Bản đồ số tìm hiểu **ngôn ngữ kiến tạo** và **ngôn ngữ định kiến** về 53 dân tộc thiểu số.
 
 ## Chạy thử
 Trang web tĩnh, không cần cài đặt. Mở trực tiếp `index.html`, hoặc chạy máy chủ cục bộ:
